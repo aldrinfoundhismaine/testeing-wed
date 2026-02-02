@@ -204,7 +204,7 @@ END:VCALENDAR`;
   const folders = { church: "16BPBMPTwZwZgTI2tnNV1Tk1EKKB4wMyv", prenup: "1ZoSsPSECRq062Bx4KAhKQUtnj24ePRAn", reception: "1FqqNku0QNhGgWMJAiec6944SVjXeAZ4i" };
   const apiKey = "AIzaSyBgEstYNO3_dKI4mC1KdsPRpx_p2gpDsXQ";
   const sectionMap = { church: "church-gallery", prenup: "prenup-gallery", reception: "reception-gallery" };
-  const PHOTOS_PER_PAGE = 16;
+  const PHOTOS_PER_PAGE = 4;
   const PLACEHOLDER = "https://via.placeholder.com/400x400/c0c0c0/ffffff?text=Upload+Here";
 
   async function fetchImages(folderId){

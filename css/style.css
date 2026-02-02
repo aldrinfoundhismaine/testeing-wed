@@ -76,11 +76,13 @@ button { cursor: pointer; border: none; }
 .nav {
   position: sticky;
   top: clamp(20px, 2vw, 28px);
-  margin: 0 auto;
-  max-width: 1100px;
+  width: min(1100px, 92%);
+  margin-inline: auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: clamp(8px, 1.5vw, 12px) clamp(12px, 2vw, 20px);
   border-radius: var(--radius-lg);
   background: var(--clr-bg-glass);
@@ -142,6 +144,49 @@ button { cursor: pointer; border: none; }
 }
 
 #settingsOverlay.active { display: block; }
+@media (max-width: 768px) {
+  .nav {
+    position: fixed !important; /* override sticky */
+    bottom: 0 !important;       /* dumikit sa bottom */
+    top: auto !important;       /* tanggalin top */
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0;
+    border-radius: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: var(--clr-bg-glass);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+    z-index: 1001;
+  }
+
+  body {
+    padding-bottom: 60px; /* para hindi matakpan ng nav */
+  }
+
+  .nav__brand {
+    display: none;
+  }
+
+  .nav__links {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .nav__links a,
+  .nav__icon {
+    font-size: 1.3rem;
+    padding: 0;
+  }
+}
+
+
+
 
 /* ==================================================
    HERO SECTION

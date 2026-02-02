@@ -77,15 +77,16 @@ button { cursor: pointer; border: none; }
   overflow: hidden;
 }
 
-/* Video as full screen background, always covers viewport */
+/* Fullscreen video background */
 .hero__video {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover; /* maintain aspect ratio while covering screen */
+  top: 50%;
+  left: 50%;
+  width: 87vw;
+  height: calc(100vh -100px);
+  object-fit: cover;
   z-index: 0;
+  transform: translate(-50%, -50%);
 }
 
 /* Countdown overlay - horizontal at 10% from top */
